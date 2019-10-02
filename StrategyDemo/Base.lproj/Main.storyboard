@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gnA-UE-MtA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6sL-Mb-aiM">
+            <objects>
+                <viewController id="gnA-UE-MtA" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oMu-zB-9L3"/>
+                        <viewControllerLayoutGuide type="bottom" id="ukc-gp-Ocu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fII-Hi-vfA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="只接收字母" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ht7-ka-E9H" customClass="CustomTextField">
+                                <rect key="frame" x="20" y="120" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yvK-hb-fmM"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入0-9" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jjS-mb-zjc" customClass="CustomTextField">
+                                <rect key="frame" x="20" y="171" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="F5m-ie-wf6"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvU-s9-qt6">
+                                <rect key="frame" x="30" y="231" width="315" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ccR-c1-q9G"/>
+                                </constraints>
+                                <state key="normal" title="验证"/>
+                                <connections>
+                                    <action selector="btnClick:" destination="gnA-UE-MtA" eventType="touchUpInside" id="fbK-j1-DxP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ht7-ka-E9H" secondAttribute="trailing" constant="20" id="Dhu-9J-x3h"/>
+                            <constraint firstAttribute="trailing" secondItem="jjS-mb-zjc" secondAttribute="trailing" constant="20" id="EB3-Vs-Haw"/>
+                            <constraint firstAttribute="trailing" secondItem="GvU-s9-qt6" secondAttribute="trailing" constant="30" id="EwF-CB-xZo"/>
+                            <constraint firstItem="jjS-mb-zjc" firstAttribute="leading" secondItem="fII-Hi-vfA" secondAttribute="leading" constant="20" id="LqF-Q1-PgO"/>
+                            <constraint firstItem="ht7-ka-E9H" firstAttribute="top" secondItem="oMu-zB-9L3" secondAttribute="bottom" constant="100" id="SE0-IO-T0g"/>
+                            <constraint firstItem="GvU-s9-qt6" firstAttribute="top" secondItem="jjS-mb-zjc" secondAttribute="bottom" constant="30" id="TOO-kp-kIs"/>
+                            <constraint firstItem="jjS-mb-zjc" firstAttribute="top" secondItem="ht7-ka-E9H" secondAttribute="bottom" constant="21" id="dSd-VP-msT"/>
+                            <constraint firstItem="ht7-ka-E9H" firstAttribute="leading" secondItem="fII-Hi-vfA" secondAttribute="leading" constant="20" id="jGJ-RE-Rza"/>
+                            <constraint firstItem="GvU-s9-qt6" firstAttribute="leading" secondItem="fII-Hi-vfA" secondAttribute="leading" constant="30" id="t4l-cY-vQt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="letterInput" destination="ht7-ka-E9H" id="PhG-Ph-T5B"/>
+                        <outlet property="numberInput" destination="jjS-mb-zjc" id="h0C-5T-48B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eU5-tD-G1a" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
